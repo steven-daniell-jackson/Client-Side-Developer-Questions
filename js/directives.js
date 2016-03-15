@@ -7,6 +7,6 @@ angular.module('resume-directives', [])
     scope: { 
       info: '=' 
     }, 
-    templateUrl: 'http://steven-daniell-jackson.github.io/Client-Side-Developer-Questions/' 
+    templateUrl: '/templates/partials/navbar.html' 
   }; 
 });
