@@ -7,6 +7,6 @@ angular.module('resume-directives', [])
     scope: { 
       info: '=' 
     }, 
-    templateUrl: '/templates/partials/navbar.html' 
+    templateUrl: '../templates/partials/navbar.html' 
   }; 
 });
