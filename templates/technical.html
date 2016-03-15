@@ -1,0 +1,142 @@
+<h1>Technical Questions</h1>
+<hr>
+<blockquote>What does this function return, and why? <br>
+  Have you encountered this problem before?
+  
+  function foo() {<br>
+  return<br>
+  {<br>
+  bar: "baz"<br>
+}<br>
+}</blockquote>
+
+<p>The function returns a Key/Value pair JSON object once called.</p>
+<hr>
+
+
+<blockquote>What are these two lines printing, and why? Have you encountered this problem before?<br>
+
+  console.log(0.1 + 0.2);<br>
+  console.log(0.1 + 0.2 == 0.3);<br>
+  What is this going to print, and why?<br></blockquote>
+  <p>The first console.log with print out the value "0.3", however the second console.log will print out false.<br>
+    Adding a number to a boolean value will not change it. <br>
+    console.log(0.1 + false);
+  </p>
+  <hr>
+
+
+  <blockquote>(function() {<br>
+   console.log(1);<br>
+   setTimeout(function(){console.log(2)}, 1000);<br>
+   setTimeout(function(){console.log(3)}, 0);<br>
+   console.log(4);<br>
+ })();</blockquote>
+
+ <p>1, 3, 4, 2 <br>
+  There is a timeout on the value of 2 and the other requests do not have a restriction.
+</p>
+<hr>
+
+<blockquote>What are some of the new HTML5 markup elements? When and where, in the context of a page, would you use them?</blockquote>
+<p>I am only familiar with the new Semantics and the input types. <br>
+  I would use the new semantics to structure my HTML page to be easier to understand. <br>
+  Eg, Using section, nav, footer, header instead of div#id
+</p>
+
+<blockquote>Which HTML markup elements disappeared in HTML5? What you would use in their stead?</blockquote>
+<p>I do not know, sorry</p>
+
+<blockquote>How and why would you use the HTML5 data attribute?</blockquote>
+<p>To store additional information about the attribute.</p>
+
+<blockquote>Describe the difference between cookies, sessionStorage and localStorage</blockquote>
+<p>Local Storage saves to the users browser <br>
+  SessionStorage stores a value/variable that can be used across pages that disappears if the page is closed. <br>
+  Cookies can be used to store user login information that expires after a certain duration.
+</p>
+
+<blockquote>Which properties form part of the CSS "box model"?</blockquote>
+<p>Content, Padding(Top, Bottom, Left and Right), Margin(Top, Bottom, Left and Right) and Border(Top, Bottom, Left and Right)</p>
+
+<blockquote>How does one implement "responsive design" using CSS?</blockquote>
+<p>Media Queries</p>
+
+<blockquote>How can you align a p "center-center" inside its containing div? <br><br>
+
+  <-!DOCTYPE html><br>
+  <-head><br>
+  <-style><br>
+  // here<br>
+  </-style><br>
+  </-head><br>
+  <-body><br>
+  <-div>Other markup</div><br>
+  <-div class=foo><br>
+  <-p class=bar>this should be centered vertically and horizontally</p><br>
+  </-div><br>
+  <-div>Other markup</-div><br>
+  </-div><br>
+</blockquote>
+
+<p>First need to correct the classes to class="foo" and class="p"<br>
+  <strong>Css:</strong> <br>
+  div.foo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+</p>
+
+
+
+<blockquote>Explain the following CSS selectors, using words.<br>
+
+  Example for div { font-weight: bold; }: describe div as "all divs on the page" (will get a bold-face font, but that's common between all the selectors below): <br><br>
+  
+  div, p { font-weight: bold; }<br>
+  div p { font-weight: bold; }<br>
+  div > p { font-weight: bold; }<br>
+  div ! p { font-weight: bold; }<br>
+  div + p { font-weight: bold; }<br>
+  div ~ p { font-weight: bold; }<br>
+  div = p { font-weight: bold; }<br>
+</blockquote>
+
+<p>"div, p", All div and p will have a font-weight of 700 <br>
+"div p", All p within div will have a font-weight of 700 <br>
+"div > p",  All p that are a direct child of div will have a font-weight of 700<br>
+"div ! p", I am not familiar with this experssion  <br>
+"div + p", I am not familiar with this experssion  <br>
+"div ~ p", I am not familiar with this experssion  <br>
+"div = p", I am not familiar with this experssion <br>
+</p>
+
+<blockquote>What are the differences between em, pc, pt and px and when would you use them, prefer to use them, and why?</blockquote>
+<p>Em and pc, I haven't used much of these<br>
+px is a fixed size,<br>
+pts for mailers, due to Outlook</p>
+<blockquote>Type down the css selector necessary to select the following.<br><br>
+
+  Example: "select all b elements" would be b { }<br>
+  
+  select all a elements which link to a https site<br>
+  select all a elements linking to a .pdf file<br>
+  select all a elements found within a div of class foo<br>
+</blockquote>
+<p>1. a[href^="https"] {}<br>
+2.a[href*=".pdf"] {}<br>
+3. div.foo a{}
+</p>
+
+<blockquote>How do static, relative, fixed and absolute position differ, in CSS? When would you use each?</blockquote>
+<p>
+Static: Does not move(Default) <br>
+Relative: Positioned relatively to where it is located(You can use it to adjust the Left, Right, Top, Bottom properties to position it)<br>
+Fixed: Will always stay in the same place.(Back to top button) <br>
+Absolute: I cannot explain offhand
+</p>
+
+<blockquote>What are the differences between visibility: hidden and display: none? When would you use each?</blockquote>
+<p>Display:none removes the element from the DOM, where Visibility: hidden only hides the element, but still appears in the DOM</p>
